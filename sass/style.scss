@@ -1,0 +1,78 @@
+// font-family: "Big Shoulders Display", sans-serif
+// font-family: "Lexend Deca", sans-serif
+@import "variables";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: $transparent-white;
+    font-family:"Lexend Deca", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.car-models {
+    display: flex;
+    width: 65vw;
+    height: 60vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    .sedans {
+        @include model-positioning($bright-orange);;
+        h2 {
+            @include h2-styles($very-light-gray);
+        }
+        button {
+            @include btn-styles($bright-orange, $very-light-gray);
+        }
+    }
+    .suvs {
+        @include model-positioning($dark-cyan);
+        h2{
+            @include h2-styles($very-light-gray);
+        }
+        button {
+            @include btn-styles($dark-cyan, $very-light-gray)
+        }
+
+    }
+    .luxury {
+        @include model-positioning($very-dark-cyan);
+        h2 {
+            @include h2-styles($very-light-gray);
+        }
+        button {
+            @include btn-styles($very-dark-cyan, $very-light-gray)
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width:1024px) {
+
+    body {
+        display: block;
+    }
+    
+    .car-models {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        min-height: 180vh;
+        border-radius: 15px;
+        margin: 5vw;
+        overflow: auto;
+    }
+}
