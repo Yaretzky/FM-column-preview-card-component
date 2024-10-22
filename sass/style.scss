@@ -31,7 +31,7 @@ body {
     border-radius: 1rem;
     overflow: hidden;
     .sedans {
-        @include model-positioning($bright-orange);;
+        @include model-positioning($bright-orange);
         h2 {
             @include h2-styles($very-light-gray);
         }
@@ -60,7 +60,7 @@ body {
     }
 }
 
-@media (min-width: 320px) and (max-width:1024px) {
+@media (min-width: 320px) and (max-width:1023px) {
 
     body {
         display: block;
@@ -74,5 +74,52 @@ body {
         border-radius: 15px;
         margin: 5vw;
         overflow: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+    .car-models {
+        .sedans {
+            align-items: center;
+            p {
+                text-align: center;
+            }
+            button {
+                position: absolute;
+                bottom: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .suvs {
+            align-items: center;
+            p {
+                text-align: center;
+            }
+            button {
+                position: absolute;
+                bottom: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .luxury {
+            align-items: center;
+            p {
+                text-align: center;
+            }
+            button {
+                position: absolute;
+                bottom: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+  }
+}
+
+@media (min-width: 1024px) and (max-width:1439px) {
+    .car-models {
+        width: 80vw;
     }
 }

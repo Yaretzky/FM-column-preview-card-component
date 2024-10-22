@@ -32,3 +32,44 @@
         background-color: $font-color;
     }
 }
+
+
+
+@media (min-width: 768px) and (max-width:1024px) {
+    @mixin model-positioning($bgc) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 33.33%;
+        padding: 5rem 5rem;
+        background-color: $bgc;
+        text-align: center;
+    }
+
+    @mixin h2-styles($font-color){
+        text-transform: uppercase;
+        font-size: 4rem;
+        margin: 3rem 0;
+        font-family: "Big Shoulders Display", sans-serif;
+        color: $font-color;
+    }
+    
+    @mixin btn-styles($font-color, $bgc,) {
+        position: absolute;
+        bottom: 5rem;
+        left: 5rem;
+        border: 2px solid $very-light-gray;
+        border-radius: 2.5rem;
+        padding: 1.5rem 0;
+        width: 30%;
+        font-weight: 700;
+        color: $font-color;
+        background-color: $bgc;
+        transition: 0.4s;
+        &:hover {
+            color: $bgc;
+            background-color: $font-color;
+        }
+    }
+}
